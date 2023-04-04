@@ -121,9 +121,9 @@ public class MemberRepositoryV1 {
 
     private void close(Connection con, Statement stmt, ResultSet rs) {
 
-        JdbcUtils.closeConnection(con);
-        JdbcUtils.closeStatement(stmt);
         JdbcUtils.closeResultSet(rs);
+        JdbcUtils.closeStatement(stmt);
+        JdbcUtils.closeConnection(con);
 
     }
 
