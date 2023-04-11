@@ -5,13 +5,13 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-@Entity
+@Entity //JPA 추가
 public class Item {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) //JPA
     private Long id;
 
-    @Column(name = "item_name", length = 10)
+    @Column(name = "item_name", length = 10) //JPA
     private String itemName;
     private Integer price;
     private Integer quantity;
