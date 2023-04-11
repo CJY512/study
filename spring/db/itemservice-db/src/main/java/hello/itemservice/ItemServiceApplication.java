@@ -18,7 +18,8 @@ import javax.sql.DataSource;
 //@Import(JdbcTemplateV2Config.class)
 //@Import(JdbcTemplateV3Config.class)
 //@Import(MyBatisConfig.class)
-@Import(JpaConfig.class)
+//@Import(JpaConfig.class)
+@Import(SpringDataJpaConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.itemservice.web")
 @Slf4j
 public class ItemServiceApplication {
@@ -33,6 +34,7 @@ public class ItemServiceApplication {
 		return new TestDataInit(itemRepository);
 	}
 
+/*
 	@Bean
 	@Profile("test")
 	public DataSource dataSource() {
@@ -44,5 +46,6 @@ public class ItemServiceApplication {
 		dataSource.setPassword("");
 		return dataSource;
 	}
+*/
 
 }
