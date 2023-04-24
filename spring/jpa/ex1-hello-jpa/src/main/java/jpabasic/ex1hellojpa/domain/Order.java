@@ -21,6 +21,10 @@ public class Order {
     @JoinColumn(name = "member_id")
     private Member member;
 
+    @OneToOne
+    @JoinColumn(name = "delivery_id")
+    private Delivery delivery;
+
     //주문서를 중심으로 어떤 아이템이 필요한 지.. 이 설정은 의미가 있다.
     @OneToMany(mappedBy = "order")
     private List<Order> orderItems = new ArrayList<>();
