@@ -1,5 +1,6 @@
 package jpabasic.ex1hellojpa.domain;
 
+import jpabasic.ex1hellojpa.domain.item.Item;
 import lombok.Getter;
 import lombok.Setter;
 
